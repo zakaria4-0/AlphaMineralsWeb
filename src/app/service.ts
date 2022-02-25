@@ -15,13 +15,13 @@ export class AlphaMineralsService{
 
     }
 
-    public getEffeciency():Observable<Output>{
-        return this.http.get<Output>(`${this.apiServerUrl}/AlphaMinerals/efficiencyppm1`);
+    public getEffeciency(date:string):Observable<Output>{
+        return this.http.get<Output>(`${this.apiServerUrl}/AlphaMinerals/efficiencyppm1/${date}`);
     }
-    public getProducts():Observable<Production[]>{
-        return this.http.get<Production[]>(`${this.apiServerUrl}/AlphaMinerals/products1`);
+    public getProducts(date:string):Observable<Production[]>{
+        return this.http.get<Production[]>(`${this.apiServerUrl}/AlphaMinerals/products1/${date}`);
     }
-    public getProductsNC():Observable<Production[]>{
-        return this.http.get<Production[]>(`${this.apiServerUrl}/AlphaMinerals/productsNC1`);
+    public getProductsNC(date:string):Observable<Production[]>{
+        return this.http.get<Production[]>(`${this.apiServerUrl}/AlphaMinerals/productsNC1/${date}`);
     }
 }

@@ -15,11 +15,20 @@
                   <!-- Page Heading -->
                   <div class="d-sm-flex align-items-center justify-content-between mb-4">
                       <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                      <h2>{{pr?.date}}</h2>
+                      <select [(ngModel)]="pr.date" name="date" class="form-select" aria-label="Default select example">
+                        <option selected>select date</option>
+                        <option >2021-03-01</option>
+                        <option >2021-03-02</option>
+                        <option >2021-03-03</option>
+                        <option >2021-03-04</option>
+                        <option >2021-03-05</option>
+                        <option >2021-03-06</option>
+                      </select>
+                      <button type="button" class="btn btn-success" (click)="getEffeciency()">submit</button>
                       
                   </div>
-
                   
-
                   <div class="row">
 
                       <!-- Area Chart -->
@@ -77,7 +86,7 @@
                                 <h6 class="m-0 font-weight-bold text-primary">PPM</h6>
                             </div>
                             <div class="card-body">
-                                <canvas id="myAreaChart2" >{{chart2}}</canvas>
+                                <canvas id="myAreaChart2" #mychart2>{{chart2}}</canvas>
                             </div>
                         </div>
 

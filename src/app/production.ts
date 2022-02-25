@@ -5,4 +5,5 @@ export class Production{
     code_article:string;
     heure:Time;
     date:string;
+    
 }
